@@ -1,0 +1,14 @@
+<div class="card">
+    <div class="card-header"><h1 class="m-0">Todo List</h1></div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let todo of todoArr; trackBy: trackByTodoId">
+                <strong>{{todo.todoItem}}</strong>
+                <div>
+                    <button (click)="onEdit(todo)" class="mr-2" mat-raised-button color="primary">Edit</button>
+                    <button (click)="onRemove(todo.todoID)" mat-raised-button color="warn">Remove</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
